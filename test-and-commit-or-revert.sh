@@ -5,11 +5,12 @@ test() {
 }
 
 commit() {
+	git add --all
 	if [ -n "$commit_message" ]
   		then
-    			git commit -am $commit_message
+    			git commit -m $commit_message
 		else
-			git commit -a
+			git commit
 	fi
 }
 
