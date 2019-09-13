@@ -14,6 +14,5 @@ commit() {
 }
 
 revert() {
- 
+	git clean -f
 }
-
