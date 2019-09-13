@@ -5,7 +5,7 @@ test() {
 }
 
 commit() {
-	if [ -z "$commit_message" ]
+	if [ -n "$commit_message" ]
   		then
     		git commit -m $commit_message
 		else
@@ -16,3 +16,5 @@ commit() {
 revert() {
 	git clean -f
 }
+
+test && commit
