@@ -7,7 +7,7 @@ test() {
 commit() {
 	if [ -n "$commit_message" ]
   		then
-    		git commit -m $commit_message
+    			git commit -m $commit_message
 		else
 			git commit
 	fi
@@ -17,4 +17,4 @@ revert() {
 	git clean -f
 }
 
-test && commit
+test && commit || revert
