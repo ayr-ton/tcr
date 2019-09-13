@@ -15,7 +15,8 @@ commit() {
 }
 
 revert() {
-	git clean -f
+	git reset --hard
+	git clean -fd
 }
 
 test && commit || revert
