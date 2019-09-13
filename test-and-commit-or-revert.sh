@@ -7,9 +7,9 @@ test() {
 commit() {
 	if [ -n "$commit_message" ]
   		then
-    			git commit -m $commit_message
+    			git commit -am $commit_message
 		else
-			git commit
+			git commit -a
 	fi
 }
 
